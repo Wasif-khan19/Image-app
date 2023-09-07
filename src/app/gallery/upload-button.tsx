@@ -4,13 +4,17 @@ import { UploadResult } from "../page";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { Upload } from "@/components/icons/upload";
+import { useState } from "react";
 
 export default function UploadButton() {
+  const [imageId, setImageId] = useState("");
   const router = useRouter();
   return (
     <Button asChild>
       <CldUploadButton
-        onUpload={(result: UploadResult) => {
+        onUpload={(result) => {
+          let res = result as UploadResult
+          setImageId(res.info.public_id);
           setTimeout(() => {
             router.refresh();
           }, 1000);
