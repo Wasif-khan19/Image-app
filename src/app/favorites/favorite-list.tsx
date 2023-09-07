@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { CloudinaryImage } from "../../components/ui/cloudinary-images";
 import { SearchResult } from "../gallery/page";
-import { ImageGrid } from "@/components/image-grid";
+import { ImageGrid } from "@/components/image-grid"
 
 export default function FavoritesList({
   initialResources,
