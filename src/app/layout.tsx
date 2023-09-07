@@ -1,4 +1,3 @@
-"use client";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import "./globals.css";
 import type { Metadata } from "next";
