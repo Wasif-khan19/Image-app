@@ -18,7 +18,7 @@ export default function Home() {
         className="bg-white text-black font-semibold rounded-lg px-4 py-2 hover:bg-gray-200"
         onUpload={(result) => {
           let res = result as UploadResult
-          setImageId(res.info.public_id);
+          setImageId(res.info.public_id)
         }}
         uploadPreset="wynddgp4"
       />
