@@ -1,1 +1,1 @@
-# Image-app
+This is an image app based on Cloudinary for editing images.
