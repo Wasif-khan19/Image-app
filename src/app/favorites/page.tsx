@@ -3,8 +3,6 @@ import { SearchResult } from "../gallery/page";
 import { ForceRefresh } from "@/components/force-refresh";
 import FavoritesList from "./favorite-list";
 
-
-
 export default async function FavoritesPage() {
   const results = (await cloudinary.v2.search
     .expression("resource_type:image AND tags=favorite")
