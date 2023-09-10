@@ -37,9 +37,11 @@ function SideMenu() {
                 Images
               </Link>
             </Button>
-            <Button variant="ghost" className="w-full justify-start gap-2">
+            <Button asChild variant="ghost" className="w-full justify-start gap-2">
+              <Link href="/albums">
               <Folder />
               Albums
+              </Link>
             </Button>
             <Button
               asChild
