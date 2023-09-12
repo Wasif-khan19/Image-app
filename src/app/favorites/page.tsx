@@ -15,7 +15,7 @@ export default async function FavoritesPage() {
     <section>
       <ForceRefresh />
       <div className="flex flex-col gap-8">
-        <div className="flex justify-between">
+        <div className="flex justify-center">
           <h1 className="font-bold text-4xl">Favorites</h1>
         </div>
 

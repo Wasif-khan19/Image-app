@@ -9,19 +9,21 @@ import {
 import { Menu } from "@/components/icons/menu";
 import { AlbumDialog } from "../album-dialog";
 import { SearchResult } from "@/app/gallery/page";
+import { useState } from "react";
 
 export function ImageMenu({image}:{image: SearchResult}) {
+  const [open, setOpen] = useState(false)
   return (
     <div className="absolute top-2 right-2">
-      <DropdownMenu>
+      <DropdownMenu open = {open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
-          <Button variant="secondary" className="w-8 h-8 p-1">
+          <Button variant="secondary" className="w-8 h-8 p-0">
             <Menu />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
+        <DropdownMenuContent className="w-40">
           <DropdownMenuItem asChild>
-            <AlbumDialog image={image}/>
+            <AlbumDialog image={image} onClose={()=>setOpen(false)}/>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
