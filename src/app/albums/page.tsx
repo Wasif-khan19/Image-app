@@ -1,3 +1,4 @@
+
 import cloudinary from "cloudinary";
 import { AlbumCard } from "./album-card";
 
@@ -11,8 +12,8 @@ export default async function AlbumPage() {
   return (
     <section>
       <div className="flex flex-col gap-8">
-        <div className="flex justify-between">
-          <h1 className="font-bold text-4xl">Albums</h1>
+        <div className="flex justify-center">
+          <h1 className="font-bold text-4xl">Your Albums</h1>
         </div>
         <div className="grid grid-cols-3 gap-4">
         {folders.map((folder)=>(
