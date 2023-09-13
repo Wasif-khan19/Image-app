@@ -14,4 +14,3 @@ export function FullHeart(props: ComponentProps<"div">) {
     </div>
   );
 }
-

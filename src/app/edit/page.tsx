@@ -22,8 +22,8 @@ export default function EditPage({
     | "bg-remove"
   >();
 
-  const [pendingPrompt, setPendingPrompt] = useState('') 
-  const [prompt, setPrompt] = useState('') 
+  const [pendingPrompt, setPendingPrompt] = useState("");
+  const [prompt, setPrompt] = useState("");
 
   return (
     <section>
@@ -33,18 +33,22 @@ export default function EditPage({
         </div>
         <div className="flex gap-6 justify-center">
           <div className="flex flex-col gap-4">
-          <Button onClick={() => {setTransformation("generative-fill"); setPrompt(pendingPrompt)}}>
-            Generative Fill
-          </Button>
-          <Label>Enter Prompt</Label>
-          <Input value={pendingPrompt}
-          onChange={(e)=> setPendingPrompt(e.currentTarget.value)}
-          />
+            <Button
+              onClick={() => {
+                setTransformation("generative-fill");
+                setPrompt(pendingPrompt);
+              }}
+            >
+              Generative Fill
+            </Button>
+            <Label>Enter Prompt</Label>
+            <Input
+              value={pendingPrompt}
+              onChange={(e) => setPendingPrompt(e.currentTarget.value)}
+            />
           </div>
 
-          <Button onClick={() => setTransformation("blur")}>
-            Apply Blur
-          </Button>
+          <Button onClick={() => setTransformation("blur")}>Apply Blur</Button>
 
           <Button onClick={() => setTransformation("grayscale")}>
             Convert to gray
@@ -53,7 +57,7 @@ export default function EditPage({
           <Button onClick={() => setTransformation("pixelate")}>
             Pixelate
           </Button>
-          
+
           <Button onClick={() => setTransformation("bg-remove")}>
             Remove Background
           </Button>

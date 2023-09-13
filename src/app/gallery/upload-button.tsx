@@ -13,7 +13,7 @@ export default function UploadButton() {
     <Button asChild>
       <CldUploadButton
         onUpload={(result) => {
-          let res = result as UploadResult
+          let res = result as UploadResult;
           setImageId(res.info.public_id);
           setTimeout(() => {
             router.refresh();
@@ -22,7 +22,7 @@ export default function UploadButton() {
         uploadPreset="wynddgp4"
       >
         <div className="flex gap-1 font-medium text-base">
-        <Upload/>
+          <Upload />
           Upload
         </div>
       </CldUploadButton>

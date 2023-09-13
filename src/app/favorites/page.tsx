@@ -8,7 +8,7 @@ export default async function FavoritesPage() {
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(30)
-    .execute()) as { resources: SearchResult[] }
+    .execute()) as { resources: SearchResult[] };
 
   return (
     <section>
@@ -17,9 +17,7 @@ export default async function FavoritesPage() {
           <h1 className="font-bold text-4xl">Favorites</h1>
         </div>
 
-        <FavoritesList
-        initialResources={results.resources}
-        />
+        <FavoritesList initialResources={results.resources} />
       </div>
     </section>
   );

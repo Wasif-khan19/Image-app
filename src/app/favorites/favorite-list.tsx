@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { CloudinaryImage } from "../../components/ui/cloudinary-images";
 import { SearchResult } from "../gallery/page";
-import { ImageGrid } from "@/components/image-grid"
+import { ImageGrid } from "@/components/image-grid";
 
 export default function FavoritesList({
   initialResources,
@@ -12,30 +12,31 @@ export default function FavoritesList({
   const [resources, setResources] = useState(initialResources);
 
   useEffect(() => {
-    setResources(initialResources)
-  }, [initialResources])
-  
+    setResources(initialResources);
+  }, [initialResources]);
+
   return (
-    <ImageGrid 
-    images={resources}
-    getImage={(imageData: SearchResult) =>{
-      return(
-        <CloudinaryImage
-        key={imageData.public_id}
-        imageData={imageData}
-        width="400"
-        height="300"
-        alt="Image description"
-        onUnheart={(unheartedResource) => {
-          setResources((currentResources) =>
-            currentResources.filter(
-              (resource) => resource.public_id !== unheartedResource.public_id
-            )
-          );
-        }}
-      />
-      )
-     }}    
+    <ImageGrid
+      images={resources}
+      getImage={(imageData: SearchResult) => {
+        return (
+          <CloudinaryImage
+            key={imageData.public_id}
+            imageData={imageData}
+            width="400"
+            height="300"
+            alt="Image description"
+            onUnheart={(unheartedResource) => {
+              setResources((currentResources) =>
+                currentResources.filter(
+                  (resource) =>
+                    resource.public_id !== unheartedResource.public_id
+                )
+              );
+            }}
+          />
+        );
+      }}
     />
   );
 }

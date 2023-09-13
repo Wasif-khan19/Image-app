@@ -3,12 +3,12 @@ import { CldUploadButton } from "next-cloudinary";
 import { CldImage } from "next-cloudinary";
 import { useState } from "react";
 
-export interface UploadResult{
+export interface UploadResult {
   info: {
     public_id: string;
   };
   event: "success";
-};
+}
 
 export default function Home() {
   const [imageId, setImageId] = useState("");
@@ -17,8 +17,8 @@ export default function Home() {
       <CldUploadButton
         className="bg-white text-black font-semibold rounded-lg px-4 py-2 hover:bg-gray-200"
         onUpload={(result) => {
-          let res = result as UploadResult
-          setImageId(res.info.public_id)
+          let res = result as UploadResult;
+          setImageId(res.info.public_id);
         }}
         uploadPreset="wynddgp4"
       />

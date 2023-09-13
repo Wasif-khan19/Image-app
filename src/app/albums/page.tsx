@@ -1,8 +1,7 @@
-
 import cloudinary from "cloudinary";
 import { AlbumCard } from "./album-card";
 
-export type Folder = { name: string; path: string }
+export type Folder = { name: string; path: string };
 
 export default async function AlbumPage() {
   const { folders } = (await cloudinary.v2.api.root_folders()) as {
@@ -16,12 +15,11 @@ export default async function AlbumPage() {
           <h1 className="font-bold text-4xl">Your Albums</h1>
         </div>
         <div className="grid grid-cols-3 gap-4">
-        {folders.map((folder)=>(
-            <AlbumCard key={folder.path} folder={folder}/>
-        ))}
+          {folders.map((folder) => (
+            <AlbumCard key={folder.path} folder={folder} />
+          ))}
         </div>
       </div>
     </section>
   );
-
 }

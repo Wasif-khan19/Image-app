@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-'use client'
+"use client";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import "./globals.css";
@@ -38,10 +38,14 @@ function SideMenu() {
                 Images
               </Link>
             </Button>
-            <Button asChild variant="ghost" className="w-full justify-start gap-2">
+            <Button
+              asChild
+              variant="ghost"
+              className="w-full justify-start gap-2"
+            >
               <Link href="/albums">
-              <Folder />
-              Albums
+                <Folder />
+                Albums
               </Link>
             </Button>
             <Button
@@ -71,8 +75,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="border-b">
           <div className="flex h-16 items-center px-4 container mx-auto">
-            <img src="wheel.png" alt="cloudinary image app logo editing image photo editing app" width={40} height={40} className=""/>
-             IMAGE LOOM
+            <img
+              src="wheel.png"
+              alt="cloudinary image app logo editing image photo editing app"
+              width={40}
+              height={40}
+              className=""
+            />
+            IMAGE LOOM
             <div className="ml-auto flex items-center space-x-4">
               <Avatar>
                 <AvatarImage

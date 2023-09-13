@@ -26,13 +26,16 @@ export function AlbumDialog({
   const [open, setOpen] = useState(false);
 
   return (
-    <Dialog open={open} onOpenChange={(newOpenState)=>{
-      setOpen(newOpenState)
-      if (!newOpenState) {
-        onClose()
-      }
-    }}>
-      <DialogTrigger asChild> 
+    <Dialog
+      open={open}
+      onOpenChange={(newOpenState) => {
+        setOpen(newOpenState);
+        if (!newOpenState) {
+          onClose();
+        }
+      }}
+    >
+      <DialogTrigger asChild>
         <Button variant="ghost">
           <FolderPlus className="mr-2 h-4 w-4" />
           <span>Add to Album</span>
@@ -61,7 +64,7 @@ export function AlbumDialog({
         <DialogFooter>
           <Button
             onClick={async () => {
-              onClose()
+              onClose();
               setOpen(false);
               await addImageInAlbum(image, albumName);
             }}
